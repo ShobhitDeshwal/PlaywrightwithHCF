@@ -1,0 +1,19 @@
+# Playwright specific
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
+/blob-report/
+/playwright/.auth/
+
+# Environment variables
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+*.code-workspace
+
+# OS specific
+.DS_Store
+Thumbs.db
