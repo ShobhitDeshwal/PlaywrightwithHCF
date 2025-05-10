@@ -3,7 +3,7 @@ import type{ Locator, Page } from "@playwright/test";
 export class StepOne{
 
     private page: Page;
-    private title:Locator;
+    public title:Locator;
     private noDependantFoundWarning:Locator;
     private totalDependants:Locator;
     private eligibleDependants:Locator;

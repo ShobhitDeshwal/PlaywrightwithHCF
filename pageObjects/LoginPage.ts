@@ -5,7 +5,7 @@ dotenv.config();
 
 
 export class LoginPage{    
-    private page: Page; 
+    public page: Page; 
     private memberNumber:string;
     private password:string;
     private myCover:Locator;
