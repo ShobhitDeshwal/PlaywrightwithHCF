@@ -24,12 +24,37 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+
+  timeout:60_000,
   use: {
+    headless: false,
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
+    
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+
+    viewport:{width:1280,height:720},
+    userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    ignoreHTTPSErrors:true,
+    screenshot:'only-on-failure',
+
+    launchOptions:{
+      slowMo:500,
+      args: [
+        '--disable-blink-features=AutomationControlled',
+        '--disable-infobars',
+        '--disable-dev-shm-usage',
+        '--no-sandbox',
+        '--disable-extensions',
+        '--no-default-browser-check',
+        '--start-maximized',
+        '--disable-gpu',
+        '--ignore-certificate-errors',
+        '--hide-scrollbars',
+      ],
+    },
   },
 
   /* Configure projects for major browsers */
