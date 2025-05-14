@@ -11,7 +11,7 @@ import {StudentIneligible} from '../../pageObjects/StudentDependant/StudentIneli
 const test = base.extend<{loginPage: LoginPage}>({
     loginPage: async({page}, use)=>{
         const loginPage = new LoginPage(page);
-        await loginPage.signIn(memberNumber, passowrd );
+        await loginPage.signInWithoutOTP(memberNumber, passowrd );
         await use(loginPage);
     },
 });

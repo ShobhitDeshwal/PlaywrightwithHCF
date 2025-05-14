@@ -8,7 +8,7 @@ let loggedInPage: Page;
 
 test.beforeEach(async({page})=>{
     const loginPage = new LoginPage(page);
-    await loginPage.signIn(process.env.studentDependantMNumber as string,process.env.studentDependantPassword as string);
+    await loginPage.signInWithoutOTP(process.env.studentDependantMNumber as string,process.env.studentDependantPassword as string);
     await page.waitForLoadState('networkidle');
     loggedInPage = page;
 
